@@ -388,7 +388,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
+  padding: 112px 0;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -432,6 +432,8 @@ body {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/people-office.jpg);
+
+    padding: 188px 0;
   }
 
   @media (min-device-pixel-ratio: 2),
