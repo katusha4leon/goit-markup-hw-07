@@ -177,18 +177,16 @@ body {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 
-  padding: 24px 0;
-
   background-color: var(--color-white);
 
   z-index: 2;
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .header {
     padding-bottom: 22px;
   }
-}
+} */
 
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .header {
@@ -1367,15 +1365,15 @@ body {
 */
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: 32px;
+  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   margin: 0;
   margin-left: auto;
-  padding: 0;
+  padding: 24px 0;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -1449,7 +1447,9 @@ body {
   margin-bottom: auto;
 }
 
-.menu-item {
+.menu-item .link {
+  display: block;
+  text-decoration: none;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
@@ -1457,19 +1457,25 @@ body {
   text-transform: capitalize;
   color: var(--color-navy-blue);
 
-  margin-bottom: 40px;
-
   transition: color var(--anim-time);
 }
 
-.menu-item:hover,
-.menu-item:focus {
+.menu-item {
+  margin-bottom: 40px;
+}
+
+.menu-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.menu-item .link:hover,
+.menu-item .link:focus,
+.menu-item .link.active {
   color: var(--color-ocean);
 }
 
-.mobile-menu .link {
-  display: block;
-  text-decoration: none;
+.menu-item .link.active {
+  color: var(--color-ocean);
 }
 
 .mobile-contacts {
